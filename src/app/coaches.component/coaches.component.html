@@ -1,0 +1,85 @@
+<div class="bg-gray-400 flex items-center justify-center min-h-screen">
+  <!-- Outer window -->
+  <div class="w-5/6 h-[90vh] bg-[#008000] text-white border border-black rounded shadow-2xl shadow-white">
+    <!-- Title bar -->
+    <div class="flex items-center justify-between bg-[#0055aa] px-3 py-1 text-xs text-white">
+      <span>Treinadores</span>
+     
+    </div>
+
+    <!-- Content -->
+    <div class="h-90 px-8 py-6 text-[12px] leading-snug relative">
+      <!-- Title -->
+      <div class="text-center mb-1">       
+        <div class="mt-1 text-[13px]">
+          Introduza os nomes dos treinadores
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="max-w-md mx-auto " (submit)="onSubmit($event)">
+      
+          <fieldset class="fieldset">
+            <legend class="fieldset-legend text-white">Treinador 1</legend>
+            <input 
+              type="text" 
+              class="input text-black" 
+              placeholder="Nome do treinador 1" 
+              [field]="coachesForm.coach0"
+            />
+          </fieldset>
+
+           <fieldset class="fieldset">
+            <legend class="fieldset-legend text-white">Treinador 2</legend>
+            <input 
+              type="text" 
+              class="input text-black" 
+              placeholder="Nome do treinador 2" 
+              [field]="coachesForm.coach1"
+            />
+          </fieldset>
+          
+            <fieldset class="fieldset">
+            <legend class="fieldset-legend text-white">Treinador 3</legend>
+            <input 
+              type="text" 
+              class="input text-black" 
+              placeholder="Nome do treinador 3" 
+              [field]="coachesForm.coach2"
+            />
+          </fieldset>
+
+            <fieldset class="fieldset">
+            <legend class="fieldset-legend text-white">Treinador 4</legend>
+            <input 
+              type="text" 
+              class="input text-black" 
+              placeholder="Nome do treinador 4" 
+              [field]="coachesForm.coach3"
+            />
+          </fieldset>
+       
+    
+
+      <!-- Bottom buttons -->
+      <div class="flex justify-center gap-3 mt-6">
+       
+        <button type="submit"
+          class="w-32 btn btn-accent" [disabled]="coachesForm().invalid()"
+        >
+            <lucide-angular [img]="CheckIcon" class="my-icon"></lucide-angular>
+          <span>OK</span>
+        </button>
+
+        <!-- Cancel button -->
+        <button
+          class="w-32 btn btn-secondary"
+        (click)="navigateToSplash()">
+          <lucide-angular [img]="CancelIcon" class="my-icon"></lucide-angular>
+          <span>Cancelar</span>
+        </button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>

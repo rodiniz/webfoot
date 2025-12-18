@@ -1,0 +1,55 @@
+<!-- teams-selected.component.html -->
+<div class="bg-gray-400 flex items-center justify-center min-h-screen">
+<div class="w-5/6 h-[90vh] bg-[#008000] text-white border border-black rounded shadow-2xl shadow-white">
+    <div class="flex items-center justify-between bg-[#0055aa] px-3 py-1 text-xs text-white">
+      <span>Treinadores</span>
+     
+    </div>
+    <!-- Title -->
+  <div class="text-center mb-6">   
+    <div class="mt-1 text-[13px]">
+      Equipas atribuídas aos treinadores
+    </div>
+  </div>
+
+  <!-- Coaches + teams table -->
+  <div class="max-w-xl mx-auto bg-[#006600] border border-black">
+    <div class="bg-[#ffff00] text-black font-bold px-3 py-1">
+      Treinadores
+    </div>
+
+    <table class="w-full text-left">
+      <thead class="bg-[#004400]">
+        <tr>
+          <th class="px-3 py-1 w-[30%]">Treinador</th>
+          <th class="px-3 py-1">Equipa</th>
+          <th class="px-3 py-1 w-[15%] text-center">Divisão</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Repeat this <tr> with @for in Angular -->
+        @for (coach of coaches; track coach.name) {
+        <tr
+          class="odd:bg-[#00aa00] even:bg-[#009000]"
+        >
+          <td class="px-3 py-1">
+            {{ coach.name }}
+          </td>
+          <td class="px-3 py-1">
+            {{ coach.team }}
+          </td>
+          <td class="px-3 py-1 text-center">
+            {{ coach.division }}
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bottom note -->
+  <div class="mt-4 text-center text-[11px] text-[#ffffaa]">
+    Prima OK para começar a época.
+  </div>
+</div>
+</div>
