@@ -48,8 +48,7 @@ export class CoachesComponent {
     this.router.navigate(['']);
    }
 
-   onSubmit($event: SubmitEvent) {
-    debugger;
+   onSubmit($event: SubmitEvent) {   
      $event.preventDefault();
      submit(this.coachesForm, async () => {
          this.router.navigate(['draft']);
