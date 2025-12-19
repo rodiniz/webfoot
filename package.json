@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
   },
   "prettier": {
     "printWidth": 100,
@@ -38,6 +41,7 @@
     "@angular/cli": "^21.0.3",
     "@angular/compiler-cli": "^21.0.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "@tauri-apps/cli": "^2.9.6",
     "daisyui": "^5.5.14",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",
